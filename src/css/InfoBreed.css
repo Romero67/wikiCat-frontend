@@ -1,0 +1,44 @@
+.container-feature{
+ display: flex;
+ align-items: center;
+ justify-content: center;
+}
+
+.galery{
+ display: flex;
+ justify-content: space-around;
+ align-items: center;
+}
+
+/*Feature.jsx*/
+.p-feature{
+ margin-top: 12px;
+}
+/*---*/
+
+@media (max-width: 992px){
+ .image-info img{
+  width: 200px;
+  height: 160px;
+ }
+}
+@media (max-width: 778px){
+ .image-info img{
+  width: 100%;
+  height: auto;
+ }
+}
+
+@media (max-width: 576px){
+
+ .image-info{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+ }
+
+ .image-info img{
+  width: 50%;
+  height: auto;
+ }
+}

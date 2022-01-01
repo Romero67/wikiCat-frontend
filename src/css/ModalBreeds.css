@@ -1,0 +1,34 @@
+
+.container-modal{
+ background: #fff;
+ position: absolute;
+ top: 0;
+ left: 0;
+ height: 100%;
+}
+
+.modal-list{
+ overflow: scroll;
+ scrollbar-width: 0;
+ max-height: 300px;
+ border: 1px solid #000;
+ border-radius: 15px;
+}
+
+.container-input-modal input{
+ border: 1px solid #000;
+ border-radius: 50px;
+ padding: 10px 20px;
+ font-size: 20px;
+ outline: none;
+ width: 100%;
+}
+
+.exit-modal{
+ display: flex;
+ justify-content: flex-end;
+}
+
+.container-exit{
+ font-size: 30px;
+}

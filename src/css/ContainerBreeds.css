@@ -1,0 +1,27 @@
+.container-breeds::-webkit-scrollbar {
+ width: 12px;               /* width of the entire scrollbar */
+}
+
+.container-breeds::-webkit-scrollbar-track {
+ /* background: orange;        color of the tracking area */
+}
+
+.container-breeds::-webkit-scrollbar-thumb {
+ background-color: rgb(202, 202, 202);    /* color of the scroll thumb */
+ border-radius: 20px;       /* roundness of the scroll thumb */
+ /*  border: 3px solid orange;  creates padding around scroll thumb */
+}
+
+.container-breeds{
+ height: auto;
+	max-height: 200px;
+	width: 300px;
+	border: 1px solid #ddd;
+	background: #f1f1f1;
+	overflow-y: scroll;
+ border-radius: 10px;
+	margin-top: 5px;
+}
+
+@media (max-width: 576px){
+}

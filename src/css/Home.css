@@ -1,0 +1,131 @@
+.main {
+ margin-top: 20px;
+ border-radius: 20px;
+}
+
+.header{
+ background-color: black;
+ height: 500px;
+ color: #fff;
+ display: flex;
+ align-items: center;
+ justify-content: flex-start;
+ background-image: url('https://p4.wallpaperbetter.com/wallpaper/959/978/430/cat-wallpaper-preview.jpg');
+ background-size: cover;
+ background-position: center;
+ border-top-left-radius: 20px;
+ border-top-right-radius: 20px;
+}
+
+.head{
+ width: 400px;
+ margin-left: 100px;
+}
+.head input {
+ border: none;
+ border-radius: 50px;
+ padding: 10px 20px;
+ font-weight: 500;
+ outline: none;
+}
+
+.container-img{
+ display: flex;
+ justify-content: center;
+}
+
+.container-img-left{
+ display: flex;
+ margin-right: 20px;
+ flex-direction: column;
+ align-items: flex-end;
+}
+
+.img1 img{
+ width: 300px;
+ height: 150px;
+}
+.img2 img{
+ margin-top: 20px;
+ width: 190px;
+ height: 260px;
+}
+.img3 img{
+ width: 190px;
+ height: 320px;
+}
+
+.container-info{
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+}
+.title-info{
+ margin: 0;
+ width: 100px;
+}
+
+.container-info h2{
+ margin-top: 40px;
+ font-size: 37px;
+ font-weight: 700;
+}
+
+@media (max-width: 992px) {
+ .container-imagenes{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+ }
+ .container-imagenes div{
+  width: 100%;
+ }
+ .container-img{
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+ }
+}
+
+@media (max-width: 768px) {
+ .img1 img{
+  width: 240px;
+  height: 120px;
+ }
+ .img2 img{
+  margin-top: 20px;
+  width: 152px;
+  height: 208px;
+ }
+ .img3 img{
+  width: 152px;
+  height: 256px;
+ }
+}
+
+@media (max-width: 576px) {
+ .main {
+  margin-top: 0px;
+ }
+ .img1 img{
+  width: 196px;
+  height: 98px;
+ }
+ .img2 img{
+  margin-top: 10px;
+  width: 128px;
+  height: 170px;
+ }
+ .img3 img{
+  width: 128px;
+  height: 208px;
+ }
+ .head{
+  width: 100%;
+  margin-left: 0;
+ }
+ .head h3{
+  font-size: 20px;
+ }
+}
