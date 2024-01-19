@@ -22,6 +22,8 @@ const ContainerBreeds = ({searching, search}) => {
      {breeds.map((el, i) => {
       if(el.name.toLowerCase().includes(search.toLowerCase())){
        return (<Link to={`/breed/${el.id}`} className='list-group-item' onClick={() => handleClick(el)} key={i}>{el.name}</Link>)
+      }else{
+        return ""
       }
      })}
     </ul>

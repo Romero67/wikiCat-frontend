@@ -7,19 +7,10 @@ import { Link } from 'react-router-dom';
 const TopBreeds = () => {
 
  const [breeds, setBreeds] = useState([]);
- const [estaOrdenado, setEstaOrdenado] = useState(false);
 
  useEffect(() => {
   getBreeds().then(data => setBreeds(data));
  }, []);
-
- useEffect(() => {
-  if(breeds.length > 0){
-   const ordenado = breeds.sort((x,y) => x.contador > y.contador ? -1: 1)
-   setBreeds(ordenado);
-   setEstaOrdenado(true)
-  }
- }, [breeds]);
 
 
  return (
@@ -37,7 +28,7 @@ const TopBreeds = () => {
     </div>
    </div>
    <div className="row justify-content-center mb-5 mt-3">
-     {estaOrdenado && breeds.map((el, i) => {
+     {breeds && breeds.map((el, i) => {
       if(i<4){
        return (
         <Link to={`/breed/${el.id}`} className="col col-img text-link" key={el._id}>
@@ -45,6 +36,8 @@ const TopBreeds = () => {
           <h4>{el.name}</h4>
         </Link>
         )
+      }else{
+        return ""
       }
      })}
    </div>

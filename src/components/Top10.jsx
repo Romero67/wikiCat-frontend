@@ -7,7 +7,7 @@ const Top10 = () => {
 
  const [breeds, setBreeds] = useState([]);
  const [estaOrdenado, setEstaOrdenado] = useState(false);
-
+  console.log("aqui mis breeeds: ",breeds)
  useEffect(() => {
   getBreeds().then(data => setBreeds(data));
  }, []);
@@ -28,6 +28,8 @@ const Top10 = () => {
        return (
         <Top10Info key={i} num={i+1} id={el.id}/>
         )
+      }else{
+        return ""
       }
      })}
 

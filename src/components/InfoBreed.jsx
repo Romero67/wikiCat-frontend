@@ -11,14 +11,15 @@ const InfoBreed = () => {
  const [images, setImages] = useState([]);
 
  const { id } = useParams();
-
+ console.log("idddd:",id)
+ console.log("info:",info)
  useEffect(() => {
   getBreedById(id).then(data => setInfo(data[0]));
- }, [])
+ }, [id])
 
  useEffect(() => {
   getImagesBreed(id).then(data => setImages(data));
- }, [])
+ }, [id])
 
  return (
   <div className='container mt-5'>
@@ -28,21 +29,21 @@ const InfoBreed = () => {
      <ShowImage idImg={info.id}/>
     </div>
     <div className="col-sm-8">
-     <h2>{info.breeds[0].name}</h2>
-     <p>{info.breeds[0].description}</p>
-     <p><b>Temperament: </b>{info.breeds[0].temperament}</p>
-     <p><b>Origin: </b>{info.breeds[0].origin}</p>
-     <p><b>Life Span: </b>{info.breeds[0].life_span}</p>
+     <h2>{info && info.breeds[0].name}</h2>
+     <p>{info && info.breeds[0].description}</p>
+     <p><b>Temperament: </b>{info && info.breeds[0].temperament}</p>
+     <p><b>Origin: </b>{info && info.breeds[0].origin}</p>
+     <p><b>Life Span: </b>{info && info.breeds[0].life_span}</p>
      <div className="row">
 
-      <Features feature={'Adaptability'} lvl={info.breeds[0].adaptability}/>
-      <Features feature={'Affection Level'} lvl={info.breeds[0].affection_level}/>
-      <Features feature={'Child Friendly'} lvl={info.breeds[0].child_friendly}/>
-      <Features feature={'Grooming'} lvl={info.breeds[0].grooming}/>
-      <Features feature={'Intelligence'} lvl={info.breeds[0].intelligence}/>
-      <Features feature={'Health Issues'} lvl={info.breeds[0].health_issues}/>
-      <Features feature={'Social Needs'} lvl={info.breeds[0].social_needs}/>
-      <Features feature={'Stranger Friendly'} lvl={info.breeds[0].stranger_friendly}/>
+      <Features feature={'Adaptability'} lvl={info && info.breeds[0].adaptability}/>
+      <Features feature={'Affection Level'} lvl={info && info.breeds[0].affection_level}/>
+      <Features feature={'Child Friendly'} lvl={info && info.breeds[0].child_friendly}/>
+      <Features feature={'Grooming'} lvl={info && info.breeds[0].grooming}/>
+      <Features feature={'Intelligence'} lvl={info && info.breeds[0].intelligence}/>
+      <Features feature={'Health Issues'} lvl={info && info.breeds[0].health_issues}/>
+      <Features feature={'Social Needs'} lvl={info && info.breeds[0].social_needs}/>
+      <Features feature={'Stranger Friendly'} lvl={info && info.breeds[0].stranger_friendly}/>
 
      </div>
     </div> 

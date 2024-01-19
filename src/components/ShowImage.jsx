@@ -7,7 +7,7 @@ const ShowImage = ({idImg}) => {
 
  useEffect(() => {
   getImgBreed(idImg).then(data => setBreed(data));
- }, [])
+ }, [idImg])
 
  return (
   <>
